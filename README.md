@@ -18,7 +18,7 @@
   <main>
     <section>
       <h2>🔍 About Me</h2>
-      <p>I’m a data analyst with 4+ years of experience turning complex data into business value. I specialize in analytics, visualization, forecasting, and automation using SQL, Python, Power BI, and cloud platforms. I love transforming raw data into stories that drive impact. Open to full-time roles in Austin, TX starting July 30, 2025.</p>
+      <p>I’m a data analyst with 4+ years of experience turning complex data into business value. I specialize in analytics, visualization, forecasting, and automation using SQL, Python, Power BI, and cloud platforms. I love transforming raw data into stories that drive impact. Open to full-time roles </p>
     </section>
 
     <section>
