@@ -1,66 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Bhargav Dharmapuri | Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Bhargav Dharmapuri</h1>
     <p>Data Analyst | SQL · Python · Power BI · Tableau · AWS · Azure</p>
-    <p>📍 Chicago, IL | 📧 <a href="mailto:dharmapuribhargav6909@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/bhargav-d-167566202/" target="_blank">LinkedIn</a></p>
+    <p>📍 Chicago, IL | 📧 <a href="mailto:dharmapuribhargav6909@gmail.com">Email Me</a> | 
+    <a href="https://www.linkedin.com/in/bhargav-d-167566202/" target="_blank">LinkedIn</a></p>
     <a href="assets/Bhargav_Dharmapuri_Data_Analyst_Resume.pdf" download>📄 Download Resume</a>
   </header>
 
-  <section>
-    <h2>🔍 About Me</h2>
-    <p>I’m a data analyst with 4+ years of experience transforming data into business value. I’ve worked across supply chain, marketing, and operations, delivering impactful insights and automation using SQL, Python, Power BI, and cloud technologies. and open to full-time roles.</p>
-  </section>
+  <main>
+    <section>
+      <h2>🔍 About Me</h2>
+      <p>I’m a data analyst with 4+ years of experience turning complex data into business value. I specialize in analytics, visualization, forecasting, and automation using SQL, Python, Power BI, and cloud platforms. I love transforming raw data into stories that drive impact. Open to full-time roles in Austin, TX starting July 30, 2025.</p>
+    </section>
 
-  <section>
-    <h2>💼 Experience</h2>
-    <ul>
-      <li><strong>Data Analyst – Carrier Technologies</strong> (2020–2023)<br>
-      Built forecasting and ML models saving $60K+, automated Power BI, and reduced query latency by 40% on Azure.</li>
+    <section>
+      <h2>💼 Experience</h2>
+      <h3>Carrier Technologies (Jun 2020 – Jul 2023)</h3>
+      <ul>
+        <li>Analyzed 10K+ records monthly using SQL & Python, improving process efficiency by 15%.</li>
+        <li>Built demand forecast models (Prophet, ARIMA), increasing inventory accuracy by 20% and saving $60K/year.</li>
+        <li>Deployed ML-based consumer trend model, improving campaign ROI by 15%.</li>
+        <li>Automated Power BI refreshes, reclaiming 780+ analyst hours/year.</li>
+        <li>Optimized Azure Synapse pipelines, reducing latency by 40%.</li>
+      </ul>
 
-      <li><strong>Junior Data Analyst – Micron Technologies</strong> (2019)<br>
-      Migrated ETL to Talend + PySpark, boosted retention using Tableau dashboards.</li>
+      <h3>Micron Technologies (Jul 2019 – Dec 2019)</h3>
+      <ul>
+        <li>Migrated manual ETL from Excel to Talend + Python, cutting manual work by 40%.</li>
+        <li>Processed 10TB+ data using PySpark, boosting speed by 30%.</li>
+        <li>Designed Snowflake star schema models to improve reporting and eliminate redundancy.</li>
+        <li>Created Tableau dashboards that lifted retention ROI by 15%.</li>
+      </ul>
 
-      <li><strong>Data Intern – Tera Star Networks</strong> (2019)<br>
-      Created regression model for sales forecasting, implemented ETL test framework with 95% accuracy.</li>
-    </ul>
-  </section>
+      <h3>Tera Star Networks (Jan 2019 – Jun 2019)</h3>
+      <ul>
+        <li>Implemented PyTest ETL validation catching 95% of issues pre-deployment.</li>
+        <li>Built regression model for sales forecasting with 85% accuracy, reducing stock-outs by 12%.</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>📊 Projects</h2>
-    <h3>Retail Sales Forecasting</h3>
-    <p>Combined ARIMA + XGBoost to reduce overstock by 12% (~$85K savings). Built Power BI dashboards for real-time decision making.</p>
+    <section>
+      <h2>📊 Projects</h2>
+      <h3>Retail Sales Forecasting</h3>
+      <p>Created XGBoost + ARIMA hybrid model to reduce overstock by 12%, saving $85K. Built live dashboards in Power BI.</p>
 
-    <h3>Fashion Trend Analytics</h3>
-    <p>Used SQL and NLP on 20 years of data to uncover gaps in fashion cycles. Visualized insights in Tableau. Projected to regain 10% market share.</p>
-  </section>
+      <h3>Fashion Trend Analytics (Capstone Project)</h3>
+      <p>Analyzed 20 years of retail & social data using SQL, NLP. Identified style gaps and regained 10% projected market share. Visualized results in Tableau.</p>
+    </section>
 
-  <section>
-    <h2>🎓 Education</h2>
-    <p><strong>MS in Business Analytics</strong>, Lewis University, IL – 2025</p>
-    <p><strong>B.Com in Computer Applications</strong>, Osmania University – 2020</p>
-  </section>
+    <section>
+      <h2>🎓 Education</h2>
+      <ul>
+        <li><strong>MS in Business Analytics</strong> – Lewis University, IL (2025)</li>
+        <li><strong>B.Com in Computer Applications</strong> – Osmania University, India (2020)</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>🛠️ Skills</h2>
-    <ul>
-      <li><strong>Data Analysis:</strong> SQL, Python (Pandas), Excel</li>
-      <li><strong>Visualization:</strong> Power BI (DAX), Tableau (LOD)</li>
-      <li><strong>Machine Learning:</strong> Scikit-learn, Prophet, XGBoost</li>
-      <li><strong>Data Engineering:</strong> PySpark, Talend, Snowflake, Azure Synapse</li>
-      <li><strong>Cloud:</strong> AWS (S3, Redshift), Azure</li>
-    </ul>
-  </section>
+    <section>
+      <h2>🛠️ Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> SQL, Python (Pandas, NumPy)</li>
+        <li><strong>Visualization:</strong> Power BI (DAX), Tableau (LOD), Excel</li>
+        <li><strong>Machine Learning:</strong> Scikit-learn, XGBoost, Prophet, ARIMA</li>
+        <li><strong>ETL/Big Data:</strong> Talend, Airflow, PySpark, Snowflake</li>
+        <li><strong>Cloud:</strong> AWS (S3, Redshift, SageMaker), Azure Synapse</li>
+        <li><strong>Soft Skills:</strong> Storytelling, stakeholder engagement, training</li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Bhargav Dharmapuri</p>
+    <p>© 2025 Bhargav Dharmapuri · Powered by GitHub Pages</p>
   </footer>
 </body>
 </html>
