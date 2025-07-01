@@ -16,7 +16,7 @@
 
   <section>
     <h2>🔍 About Me</h2>
-    <p>I’m a data analyst with 4+ years of experience transforming data into business value. I’ve worked across supply chain, marketing, and operations, delivering impactful insights and automation using SQL, Python, Power BI, and cloud technologies. I'm moving to Austin, TX by July 30, 2025, and open to full-time roles.</p>
+    <p>I’m a data analyst with 4+ years of experience transforming data into business value. I’ve worked across supply chain, marketing, and operations, delivering impactful insights and automation using SQL, Python, Power BI, and cloud technologies. and open to full-time roles.</p>
   </section>
 
   <section>
