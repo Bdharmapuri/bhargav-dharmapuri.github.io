@@ -1,334 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Bhargav Dharmapuri - Data Analyst Portfolio</title>
-  <meta content="Results-driven Data Analyst with 4+ years of experience in BI, predictive analytics, and data engineering." name="description">
-  <meta content="Data Analyst, SQL, Python, Power BI, Tableau" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bhargav Dharmapuri - Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pzwVN+IjV8T0YUne+0zYyR+VbH0ybRHQH1+2KsC3+Cxtb8bi+G8/kCR50ew6ymXkDAlP5vvKqRaNLoO0GDaqfw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Root colors */
+    :root {
+      --bg-dark: #000;
+      --text-light: #fff;
+      --accent: #ffc107;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      overflow-x: hidden;
+    }
+    /* Navbar */
+    .navbar {
+      background: transparent !important;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      padding: 1rem 2rem;
+    }
+    .navbar-brand { color: var(--text-light); font-weight: bold; }
+    .navbar-nav .nav-link {
+      color: var(--text-light) !important;
+      margin-right: 1.5rem;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    .navbar-nav .nav-link.active { position: relative; }
+    .navbar-nav .nav-link.active::after {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      position: absolute;
+      bottom: -4px; left: 50%; transform: translateX(-50%);
+    }
+    /* Hero */
+    .hero {
+      height: 100vh;
+      background: url('assets/img/hero-bg.jpg') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 0 1rem;
+    }
+    .hero-content h5 {
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    .hero-content h1 .highlight {
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .hero-content .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background: var(--text-light);
+      animation: blink 1s infinite;
+      vertical-align: bottom;
+      margin-left: 2px;
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+    /* Social & CV button */
+    .hero-social {
+      margin: 2rem 0;
+    }
+    .hero-social a {
+      color: var(--text-light);
+      font-size: 1.2rem;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
+    }
+    .hero-social a:hover { color: var(--accent); }
+    .btn-cv {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      border: 2px solid var(--text-light);
+      border-radius: 50px;
+      text-decoration: none;
+      color: var(--text-light);
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn-cv:hover {
+      background: var(--accent);
+      color: var(--bg-dark);
+      border-color: var(--accent);
+    }
+    /* Scroll arrow */
+    .scroll-down {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%; transform: translateX(-50%);
+      font-size: 2rem;
+      color: var(--text-light);
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%,100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, 10px); }
+    }
+  </style>
 </head>
-
 <body>
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-      <h1 class="logo mr-auto"><a href="#hero">Bhargav Dharmapuri</a></h1>
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#services">Skills</a></li>
-          <li><a href="#portfolio">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Bhargav</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#clients">Client</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-      </nav>
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center" data-aos="fade">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Hi, I'm Bhargav Dharmapuri</h1>
-          <h2>Results-Driven Data Analyst</h2>
-          <p>4+ years of experience in BI, predictive analytics, and data-driven decision-making. I transform complex data into insights that drive business growth.</p>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#contact" class="btn-get-started scrollto">Contact Me</a>
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/profile.png" class="img-fluid animated" alt="Profile">
-        </div>
       </div>
     </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>About</h2>
-          <p>Proficient in Python (Pandas, Scikit-learn), SQL, Power BI, and Tableau. Optimized supply chains—reducing costs by 10% and improving inventory accuracy by 20%. Developed ML models boosting marketing ROI by 15%, automated reporting saving 15+ hours weekly. Skilled in ETL pipeline design and big data processing.</p>
-        </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content text-center">
+      <h5>Hello &amp; Welcome</h5>
+      <h1>I Am <span class="highlight">Bhargav Dharmapuri</span><span class="cursor"></span></h1>
+      <div class="hero-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-dribbble"></i></a>
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
       </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Resume</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Experience</h3>
-            <!-- Data Analyst -->
-            <div class="resume-item pb-0">
-              <h4>Data Analyst, Carrier Technologies</h4>
-              <h5>06/2020 – 07/2023</h5>
-              <p><em>Hyderabad, India</em></p>
-              <ul>
-                <li>Analyzed 10K+ monthly records via SQL & Python to boost operational efficiency by 15%.</li>
-                <li>Built time-series forecasting models improving inventory accuracy by 20%, saving $60K annually.</li>
-                <li>Developed consumer trend models raising marketing ROI by 15% within 3 months.</li>
-                <li>Automated Power BI reports, saving 15+ hours weekly for 100+ users.</li>
-                <li>Optimized Azure Synapse pipelines, reducing retrieval times by 40%.</li>
-                <li>Designed dashboards accelerating executive decisions by 35%.</li>
-                <li>Trained 15+ team members on SQL & Power BI, increasing analytics adoption by 50%.</li>
-              </ul>
-            </div>
-            <!-- Junior Data Analyst -->
-            <div class="resume-item">
-              <h4>Junior Data Analyst, Micron Technologies</h4>
-              <h5>07/2019 – 12/2019</h5>
-              <p><em>Hyderabad, India</em></p>
-              <ul>
-                <li>Automated Excel workflows with Talend & Python, cutting manual tasks by 40%.</li>
-                <li>Engineered PySpark scripts to process 10TB+ of data, improving performance by 30%.</li>
-                <li>Optimized PySpark pipelines via GridSearchCV, reducing runtimes by 30%.</li>
-                <li>Designed Star Schema models in Snowflake, eliminating 25% redundant reporting.</li>
-                <li>Created automated Excel reports, saving 40% of weekly work hours.</li>
-                <li>Built Tableau dashboards tracking churn, boosting campaign ROI by 15%.</li>
-              </ul>
-            </div>
-            <!-- Intern -->
-            <div class="resume-item">
-              <h4>Intern, Tera Star Networks Pvt Ltd</h4>
-              <h5>01/2019 – 06/2019</h5>
-              <p><em>Hyderabad, India</em></p>
-              <ul>
-                <li>Developed pytest-based ETL validation framework, catching 95% of data issues pre-release.</li>
-                <li>Built regression models achieving 85% forecasting accuracy, reducing stockouts by 12%.</li>
-                <li>Refactored SQL procedures & Informatica mappings, cutting batch time by 30%.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title">Education & Skills</h3>
-            <!-- Education -->
-            <div class="resume-item pb-0">
-              <h4>Master of Science in Business Analytics</h4>
-              <h5>2025</h5>
-              <p>Lewis University</p>
-            </div>
-            <div class="resume-item pb-0">
-              <h4>Bachelor of Commerce in Computer Applications</h4>
-              <h5>2020</h5>
-              <p>Osmania University</p>
-            </div>
-            <!-- Skills -->
-            <div class="resume-item">
-              <h4>Skills</h4>
-              <div class="skills-content">
-                <div class="progress">
-                  <span class="skill">Python <i class="val">90%</i></span>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-                <div class="progress">
-                  <span class="skill">SQL <i class="val">95%</i></span>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-                <div class="progress">
-                  <span class="skill">Power BI <i class="val">85%</i></span>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-                <div class="progress">
-                  <span class="skill">Tableau <i class="val">80%</i></span>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>Technical expertise and tool proficiency.</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="icofont-data"></i></div>
-            <h4 class="title"><a href="">Programming & Analytics</a></h4>
-            <p class="description">Python, SQL, PySpark, Pandas, NumPy, SciPy, Matplotlib.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="icofont-brain-alt"></i></div>
-            <h4 class="title"><a href="">AI & Machine Learning</a></h4>
-            <p class="description">Scikit-learn, XGBoost, TensorFlow, Prophet, ARIMA, NLP with SpaCy/NLTK.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="icofont-engineering"></i></div>
-            <h4 class="title"><a href="">Data Engineering</a></h4>
-            <p class="description">Talend, Informatica, Airflow, Hive, Delta Lake, AWS & Azure Cloud.</p>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Projects</h2>
-          <p>Highlighted deliverables and outcomes.</p>
-        </div>
-        <div class="row portfolio-container">
-
-          <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/retail.jpg" class="img-fluid" alt="Retail Sales Forecasting">
-              <div class="portfolio-info">
-                <h4>Retail Sales Forecasting</h4>
-                <p>Ensemble forecasting with XGBoost & ARIMA</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/retail.jpg" data-gall="portfolioGallery" class="venobox" title="Retail Forecasting"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/fashion.jpg" class="img-fluid" alt="Fashion Trends Analysis">
-              <div class="portfolio-info">
-                <h4>Fashion Trends Analysis</h4>
-                <p>Clustering & trend detection over 20 years of sales data</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/fashion.jpg" data-gall="portfolioGallery" class="venobox" title="Fashion Trends"><i class="bx bx-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Let&rsquo;s connect!</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">  
-            <div class="info-box mb-4">
-              <i class="bx bx-map"></i>
-              <h3>Location</h3>
-              <p>Chicago, IL, USA</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="info-box  mb-4">
-              <i class="bx bx-envelope"></i>
-              <h3>Email</h3>
-              <p>Dharmapuribhargav6909@gmail.com</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="info-box  mb-4">
-              <i class="bx bx-phone-call"></i>
-              <h3>Call</h3>
-              <p>+1 (331) 290-4803</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container d-md-flex py-4">
-      <div class="mr-md-auto text-center text-md-left">
-        <div class="copyright">
-          &copy; 2025 <strong><span>Bhargav Dharmapuri</span></strong>. All Rights Reserved
-        </div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://www.linkedin.com/in/bhargav-d-167566202/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://bdharmapuri.github.io/bhargav-dharmapuri.github.io/" class="github"><i class="bx bxl-github"></i></a>
-      </div>
+      <a href="#resume" class="btn-cv">Download CV</a>
     </div>
-  </footer><!-- End Footer -->
+    <div class="scroll-down"><i class="fas fa-chevron-down"></i></div>
+  </section>
 
-  <div id="preloader"></div>
-  <a href="#hero" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
