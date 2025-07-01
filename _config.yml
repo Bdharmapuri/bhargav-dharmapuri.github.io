@@ -1,0 +1,9 @@
+# ─ _config.yml ─────────────────────────────────────────────────────────────
+title: Bhargav Dharmapuri
+email: dharmapuribhargav6909@gmail.com
+description: "Data Analyst & Engineer — 4+ years turning data into insights with SQL, Python, Power BI & AWS/Azure."
+baseurl: ""      # leave blank for username.github.io
+url: "https://your-username.github.io"
+theme: jekyll-theme-minimal
+paginate: 5
+# ─ end──────────────────────────────────────────────────────────────────────
