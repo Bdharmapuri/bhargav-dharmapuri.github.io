@@ -1,125 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Bhargav Dharmapuri - Data Analyst Portfolio</title>
-  <meta name="description" content="Portfolio of Bhargav Dharmapuri - Data Analyst with expertise in SQL, Python, Power BI, Tableau, and cloud platforms.">
-  <meta name="keywords" content="Data Analyst, Python, Power BI, SQL, Tableau, Bhargav Dharmapuri">
-
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhargav Dharmapuri - Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4B6F9C;
+            --secondary-color: #F5F5F5;
+            --accent-color: #FF6B6B;
+            --text-color: #333333;
+            --bg-color: #ffffff;
+            --font-family: 'Inter', sans-serif;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: var(--font-family);
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 2rem 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0.5rem auto;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #e55a5a;
+        }
+        section {
+            padding: 3rem 0;
+        }
+        h2.section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .section-content {
+            display: grid;
+            gap: 2rem;
+        }
+        .experience-item {
+            background: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .experience-item h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .experience-item span {
+            display: block;
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        .experience-item ul {
+            list-style: disc inside;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .skill-category h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .skill-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .skill-category ul li {
+            margin-bottom: 0.3rem;
+        }
+        .project-item {
+            background: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .project-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .project-item ul {
+            list-style: disc inside;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background: #222;
+            color: #fff;
+        }
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+    </style>
 </head>
-
 <body>
-
-  <!-- Header with Navigation -->
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="#" class="logo d-flex align-items-center">
-        <h1 class="sitename">Bhargav</h1>
-      </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="https://bdharmapuri.github.io/bhargav-dharmapuri.github.io/" target="_blank">Portfolio</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="hero" class="hero section dark-background text-center">
-    <div class="container">
-      <h2>I am Bhargav Dharmapuri</h2>
-      <p><span class="typed" data-typed-items="Data Analyst, BI Specialist, Python Developer, SQL Expert"></span></p>
-      <a href="https://bdharmapuri.github.io/bhargav-dharmapuri.github.io/" class="btn btn-primary mt-3" target="_blank">View My Portfolio</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="assets/img/profile-img.jpg" class="img-fluid" alt="Bhargav Dharmapuri">
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Bhargav Dharmapuri</div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <h1>Results-Driven Data Analyst</h1>
+                <p>With 4+ years of experience in business intelligence, predictive analytics, and data-driven decision-making, I transform complex data into actionable insights that drive business growth.</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
         </div>
-        <div class="col-md-6">
-          <p><strong>Name:</strong> Bhargav Dharmapuri</p>
-          <p><strong>Email:</strong> dharmapuribhargav6909@gmail.com</p>
-          <p><strong>Phone:</strong> (331) 290-4803</p>
-          <p><strong>Profile:</strong> Data Analyst | Python | SQL | BI Tools | Cloud</p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bhargav-dharmapuri" target="_blank">linkedin.com/in/bhargav-dharmapuri</a></p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/bdharmapuri" target="_blank">github.com/bdharmapuri</a></p>
-          <p><strong>Portfolio:</strong> <a href="https://bdharmapuri.github.io/bhargav-dharmapuri.github.io/" target="_blank">bdharmapuri.github.io/bhargav-dharmapuri.github.io</a></p>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p><strong>Proficient in Python (Pandas, Scikit-learn), SQL, Power BI, and Tableau for advanced data analysis and visualization.</strong> Proven track record of optimizing supply chains—reducing logistics costs by 10% and improving inventory accuracy by 20%. Developed machine learning models that increased marketing ROI by 15% and automated reporting processes to save 15+ hours weekly. Skilled in designing ETL pipelines (Talend, Informatica) and processing large datasets with big data technologies (Spark, Hive). Created interactive dashboards that accelerated executive decision-making by 35% through actionable insights. Collaborative team player who trained 15+ employees, driving 50% higher analytics adoption across departments.</p>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills section">
-    <div class="container">
-      <h3>Skills</h3>
-      <ul>
-        <li>Python, SQL, PySpark</li>
-        <li>Power BI, Tableau</li>
-        <li>Talend, Airflow, Informatica</li>
-        <li>Machine Learning: Scikit-learn, ARIMA, Prophet</li>
-        <li>Cloud: AWS (S3, Redshift), Azure (Synapse)</li>
-        <li>Big Data: Hive, Delta Lake</li>
-        <li>Excel (Pivot Tables, VBA)</li>
-      </ul>
-    </div>
-  </section>
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="section-content">
+                <div class="experience-item">
+                    <h3>Data Analyst | Carrier Technologies</h3>
+                    <span>Hyderabad, India | 06/2020 – 07/2023</span>
+                    <ul>
+                        <li>Analyzed 10K+ monthly records using SQL (joins, CTEs) and Python (Pandas) to identify inefficiencies, improving operational efficiency by 15%.</li>
+                        <li>Developed a time-series forecasting model (Prophet, ARIMA) that increased inventory accuracy by 20%, reducing overstock costs by $60K annually.</li>
+                        <li>Built a consumer trend analysis model (Scikit-learn) that boosted marketing ROI by 15% in 3 months.</li>
+                        <li>Automated weekly sales reports via Power BI Gateway, saving 15+ hours weekly for 100+ users.</li>
+                        <li>Optimized Azure Synapse pipelines, reducing data retrieval times by 40% for TB-scale datasets.</li>
+                        <li>Designed interactive dashboards (DAX measures, drill-through filters) that accelerated executive decisions by 35%.</li>
+                        <li>Trained 15+ employees on SQL and Power BI, increasing analytics adoption by 50%.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Junior Data Analyst | Micron Technologies</h3>
+                    <span>Hyderabad, India | 07/2019 – 12/2019</span>
+                    <ul>
+                        <li>Automated legacy Excel workflows using Talend and Python (OpenPyXL, Pandas), reducing manual processing time by 40%.</li>
+                        <li>Engineered PySpark scripts to cleanse and aggregate 10TB+ of semi-structured data (JSON/Parquet), improving query performance by 30%.</li>
+                        <li>Optimized PySpark pipelines using hyperparameter tuning (GridSearchCV), reducing run time by 30%.</li>
+                        <li>Designed a Star Schema data model in Snowflake with conformed dimensions, eliminating 25% duplicate reporting efforts across departments.</li>
+                        <li>Developed automated Excel report generators (pivot tables, VLOOKUP), cutting manual work from 8 hours to 3 hours weekly (40% savings).</li>
+                        <li>Created Tableau dashboards with LOD calculations to track customer churn, enabling targeted campaigns that increased ROI by 15%.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Intern | Tera Star Networks Pvt Ltd</h3>
+                    <span>Hyderabad, India | 01/2019 – 06/2019</span>
+                    <ul>
+                        <li>Developed a Python-based validation framework using pytest to automate ETL output verification against 50+ business rules, identifying 95% of data issues before reporting cycles.</li>
+                        <li>Built and deployed a linear regression model (Scikit-learn) for sales forecasting, achieving 85% accuracy and reducing stockouts by 12%.</li>
+                        <li>Refactored 20+ SQL stored procedures and designed Informatica mappings to streamline data transformations, cutting processing time by 30% (from 5 hrs → 3.5 hrs per batch).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Resume Section -->
-  <section id="resume" class="resume section">
-    <div class="container">
-      <h3>Professional Summary</h3>
-      <p>Results-driven Data Analyst with 4+ years of experience in business intelligence, predictive analytics, and data-driven decision-making. Proven ability to develop ML models, automate workflows, and deliver actionable insights through interactive dashboards.</p>
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming</h4>
+                    <ul>
+                        <li>Python, SQL, PySpark</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>AI/ML</h4>
+                    <ul>
+                        <li>Scikit-learn, XGBoost, TensorFlow, Time‑Series Forecasting (Prophet, ARIMA), NLP (SpaCy, NLTK)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Data Engineering</h4>
+                    <ul>
+                        <li>Talend, Informatica, Apache Airflow, PySpark, Hive, Delta Lake, AWS (S3, Redshift, SageMaker), Azure (Synapse)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Analytics & Visualization</h4>
+                    <ul>
+                        <li>Power BI (DAX, Power Query), Tableau (LOD Calculations), Advanced Excel, Pandas, NumPy, Matplotlib</li>
+                    </ul>
+                </div>
+            </div>
+        "</div>
+    </section>
 
-      <h3>Experience</h3>
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="section-content">
+                <div class="project-item">
+                    <h4>Retail Sales Forecasting</h4>
+                    <ul>
+                        <li>Addressed inventory cost issues caused by inaccurate demand predictions (12% overstock).</li>
+                        <li>Developed an ensemble forecasting model combining XGBoost and ARIMA techniques.</li>
+                        <li>Created meaningful features including holiday indicators and price elasticity metrics.</li>
+                        <li>Designed an interactive Power BI dashboard for real-time inventory monitoring.</li>
+                        <li>Results: Achieved 12% reduction in overstock costs, saving $85K annually.</li>
+                    </ul>
+                </div>
+                <div class="project-item">
+                    <h4>Fashion Trends Analysis</h4>
+                    <ul>
+                        <li>Conducted comprehensive analysis of 20 years of historical sales data to solve declining market share issues.</li>
+                        <li>Implemented SQL window functions and k-means clustering on social media sentiment data.</li>
+                        <li>Built interactive Tableau visualizations to track emerging fashion trends.</li>
+                        <li>Results: Enabled data-driven inventory planning projected to increase market share by 10%.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <h4>Carrier Technologies | Data Analyst | Hyderabad, India | 06/2020 – 07/2023</h4>
-      <ul>
-        <li>Analyzed 10K+ monthly operational and sales records using advanced SQL (joins, CTEs) and Python (Pandas), identifying bottlenecks and improving operational efficiency by 15%.</li>
-        <li>Built a time-series inventory forecasting model using Prophet and ARIMA, boosting inventory accuracy by 20% and cutting $60K in overstock costs annually.</li>
-        <li>Developed machine learning models (Scikit-learn) for consumer trend analysis, increasing marketing ROI by 15% in just 3 months.</li>
-        <li>Automated Power BI dashboards using Power BI Gateway, saving over 15 hours weekly for 100+ stakeholders across departments.</li>
-        <li>Optimized Azure Synapse data pipelines for TB-scale datasets, reducing data retrieval times by 40% and improving reporting turnaround.</li>
-        <li>Created interactive dashboards with DAX, slicers, and drill-through filters, accelerating decision-making for leadership by 35%.</li>
-        <li>Led and conducted internal training for 15+ analysts on Power BI and SQL best practices, resulting in 50% higher adoption of BI tools.</li>
-      </ul>
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="section-content">
+                <div class="experience-item">
+                    <h3>Master of Science in Business Analytics</h3>
+                    <span>Lewis University | 2025</span>
+                </div>
+                <div class="experience-item">
+                    <h3>Bachelor of Commerce in Computer Applications</h3>
+                    <span>Osmania University | 2020</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <h4>Micron Technologies | Junior Data Analyst | Hyderabad, India | 07/2019 – 12/2019</h4>
-      <ul>
-        <li>Redesigned legacy Excel-based reporting workflows by automating with Python (OpenPyXL, Pandas) and Talend ETL, reducing manual work by 40%.</li>
-        <li>Built PySpark pipelines to clean and aggregate 10+ TB of semi-structured data (JSON, Parquet), improving data accessibility and query speeds by 30%.</li>
-        <li>Optimized PySpark workflows through hyperparameter tuning with GridSearchCV, achieving 30% faster execution time.</li>
-        <li>Designed dimensional data models (Star Schema) on Snowflake, reducing duplicate data efforts by 25% and improving query reliability.</li>
-        <li>Created automated Excel reports with pivot tables and macros, reducing weekly manual effort from 8 hours to 3 hours.</li>
-        <li>Developed churn analysis dashboards in Tableau using Level-of-Detail (LOD) calculations to support targeted customer retention strategies.</li>
-      </ul>
-
-      <h4>Tera Star Networks Pvt Ltd | Data Analyst Intern | Hyderabad, India | 01/2019 – 06/2019</h4>
-      <ul>
-        <li>Built Python-based data validation framework using pytest to ensure ETL output integrity across 50+ business rules, catching 95% of errors pre-deployment.</li>
-        <li>Implemented linear regression models (Scikit-learn) for monthly sales forecasting, achieving 85% accuracy and improving stock management by 12%.</li>
-        <li>Refactored 20+ SQL stored procedures and created Informatica mappings to improve data transformation accuracy and reduce processing time by 30%.</li>
-      </ul>
-
-      <h3>Education</h3>
-      <ul>
-        <li>M.S. in Business Analytics, Lewis University, 2025</li>
-        <li>B.Com in Computer Applications, Osmania University, 2020</li>
-      </ul>
-    </div>
-  </section>
+    <footer id="contact">
+        <div class="container">
+            <p>Contact Me:</p>
+            <p><a href="mailto:Dharmapuribhargav6909@gmail.com">Dharmapuribhargav6909@gmail.com</a> | <a href="tel:+13312904803">(331) 290-4803</a></p>
+            <p><a href="https://www.linkedin.com/in/bhargav-d-167566202/">LinkedIn</a> | <a href="https://bdharmapuri.github.io/bhargav-dharmapuri.github.io/">GitHub Portfolio</a></p>
+            <p>© 2025 Bhargav Dharmapuri. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
