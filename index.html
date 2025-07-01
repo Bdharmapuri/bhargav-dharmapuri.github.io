@@ -1,318 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhargav Dharmapuri - Data Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #4B6F9C;
-            --secondary-color: #F5F5F5;
-            --accent-color: #FF6B6B;
-            --text-color: #333333;
-            --bg-color: #ffffff;
-            --font-family: 'Inter', sans-serif;
-        }
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: var(--font-family);
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            line-height: 1.6;
-        }
-        header {
-            background: var(--primary-color);
-            color: #fff;
-            padding: 2rem 0;
-        }
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0.5rem auto;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--accent-color);
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: background 0.3s ease;
-        }
-        .btn:hover {
-            background: #e55a5a;
-        }
-        section {
-            padding: 3rem 0;
-        }
-        h2.section-title {
-            font-size: 2rem;
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .section-content {
-            display: grid;
-            gap: 2rem;
-        }
-        .experience-item {
-            background: var(--secondary-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .experience-item h3 {
-            font-size: 1.25rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        .experience-item span {
-            display: block;
-            font-size: 0.9rem;
-            color: #555;
-            margin-bottom: 1rem;
-        }
-        .experience-item ul {
-            list-style: disc inside;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-        .skill-category h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-        .skill-category ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .skill-category ul li {
-            margin-bottom: 0.3rem;
-        }
-        .project-item {
-            background: var(--secondary-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .project-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-        .project-item ul {
-            list-style: disc inside;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            background: #222;
-            color: #fff;
-        }
-        footer a {
-            color: var(--accent-color);
-            text-decoration: none;
-            margin: 0 0.5rem;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Bhargav Dharmapuri - Data Analyst Portfolio</title>
+  <meta content="Results-driven Data Analyst with 4+ years of experience in BI, predictive analytics, and data engineering." name="description">
+  <meta content="Data Analyst, SQL, Python, Power BI, Tableau" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Bhargav Dharmapuri</div>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="hero">
-                <h1>Results-Driven Data Analyst</h1>
-                <p>With 4+ years of experience in business intelligence, predictive analytics, and data-driven decision-making, I transform complex data into actionable insights that drive business growth.</p>
-                <a href="#contact" class="btn">Get In Touch</a>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo mr-auto"><a href="#hero">Bhargav Dharmapuri</a></h1>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#services">Skills</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center" data-aos="fade">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Hi, I'm Bhargav Dharmapuri</h1>
+          <h2>Results-Driven Data Analyst</h2>
+          <p>4+ years of experience in BI, predictive analytics, and data-driven decision-making. I transform complex data into insights that drive business growth.</p>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#contact" class="btn-get-started scrollto">Contact Me</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/img/profile.png" class="img-fluid animated" alt="Profile">
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>About</h2>
+          <p>Proficient in Python (Pandas, Scikit-learn), SQL, Power BI, and Tableau. Optimized supply chains—reducing costs by 10% and improving inventory accuracy by 20%. Developed ML models boosting marketing ROI by 15%, automated reporting saving 15+ hours weekly. Skilled in ETL pipeline design and big data processing.</p>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Resume</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Experience</h3>
+            <!-- Data Analyst -->
+            <div class="resume-item pb-0">
+              <h4>Data Analyst, Carrier Technologies</h4>
+              <h5>06/2020 – 07/2023</h5>
+              <p><em>Hyderabad, India</em></p>
+              <ul>
+                <li>Analyzed 10K+ monthly records via SQL & Python to boost operational efficiency by 15%.</li>
+                <li>Built time-series forecasting models improving inventory accuracy by 20%, saving $60K annually.</li>
+                <li>Developed consumer trend models raising marketing ROI by 15% within 3 months.</li>
+                <li>Automated Power BI reports, saving 15+ hours weekly for 100+ users.</li>
+                <li>Optimized Azure Synapse pipelines, reducing retrieval times by 40%.</li>
+                <li>Designed dashboards accelerating executive decisions by 35%.</li>
+                <li>Trained 15+ team members on SQL & Power BI, increasing analytics adoption by 50%.</li>
+              </ul>
             </div>
-        </div>
-    </header>
-
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p><strong>Proficient in Python (Pandas, Scikit-learn), SQL, Power BI, and Tableau for advanced data analysis and visualization.</strong> Proven track record of optimizing supply chains—reducing logistics costs by 10% and improving inventory accuracy by 20%. Developed machine learning models that increased marketing ROI by 15% and automated reporting processes to save 15+ hours weekly. Skilled in designing ETL pipelines (Talend, Informatica) and processing large datasets with big data technologies (Spark, Hive). Created interactive dashboards that accelerated executive decision-making by 35% through actionable insights. Collaborative team player who trained 15+ employees, driving 50% higher analytics adoption across departments.</p>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="section-content">
-                <div class="experience-item">
-                    <h3>Data Analyst | Carrier Technologies</h3>
-                    <span>Hyderabad, India | 06/2020 – 07/2023</span>
-                    <ul>
-                        <li>Analyzed 10K+ monthly records using SQL (joins, CTEs) and Python (Pandas) to identify inefficiencies, improving operational efficiency by 15%.</li>
-                        <li>Developed a time-series forecasting model (Prophet, ARIMA) that increased inventory accuracy by 20%, reducing overstock costs by $60K annually.</li>
-                        <li>Built a consumer trend analysis model (Scikit-learn) that boosted marketing ROI by 15% in 3 months.</li>
-                        <li>Automated weekly sales reports via Power BI Gateway, saving 15+ hours weekly for 100+ users.</li>
-                        <li>Optimized Azure Synapse pipelines, reducing data retrieval times by 40% for TB-scale datasets.</li>
-                        <li>Designed interactive dashboards (DAX measures, drill-through filters) that accelerated executive decisions by 35%.</li>
-                        <li>Trained 15+ employees on SQL and Power BI, increasing analytics adoption by 50%.</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3>Junior Data Analyst | Micron Technologies</h3>
-                    <span>Hyderabad, India | 07/2019 – 12/2019</span>
-                    <ul>
-                        <li>Automated legacy Excel workflows using Talend and Python (OpenPyXL, Pandas), reducing manual processing time by 40%.</li>
-                        <li>Engineered PySpark scripts to cleanse and aggregate 10TB+ of semi-structured data (JSON/Parquet), improving query performance by 30%.</li>
-                        <li>Optimized PySpark pipelines using hyperparameter tuning (GridSearchCV), reducing run time by 30%.</li>
-                        <li>Designed a Star Schema data model in Snowflake with conformed dimensions, eliminating 25% duplicate reporting efforts across departments.</li>
-                        <li>Developed automated Excel report generators (pivot tables, VLOOKUP), cutting manual work from 8 hours to 3 hours weekly (40% savings).</li>
-                        <li>Created Tableau dashboards with LOD calculations to track customer churn, enabling targeted campaigns that increased ROI by 15%.</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3>Intern | Tera Star Networks Pvt Ltd</h3>
-                    <span>Hyderabad, India | 01/2019 – 06/2019</span>
-                    <ul>
-                        <li>Developed a Python-based validation framework using pytest to automate ETL output verification against 50+ business rules, identifying 95% of data issues before reporting cycles.</li>
-                        <li>Built and deployed a linear regression model (Scikit-learn) for sales forecasting, achieving 85% accuracy and reducing stockouts by 12%.</li>
-                        <li>Refactored 20+ SQL stored procedures and designed Informatica mappings to streamline data transformations, cutting processing time by 30% (from 5 hrs → 3.5 hrs per batch).</li>
-                    </ul>
-                </div>
+            <!-- Junior Data Analyst -->
+            <div class="resume-item">
+              <h4>Junior Data Analyst, Micron Technologies</h4>
+              <h5>07/2019 – 12/2019</h5>
+              <p><em>Hyderabad, India</em></p>
+              <ul>
+                <li>Automated Excel workflows with Talend & Python, cutting manual tasks by 40%.</li>
+                <li>Engineered PySpark scripts to process 10TB+ of data, improving performance by 30%.</li>
+                <li>Optimized PySpark pipelines via GridSearchCV, reducing runtimes by 30%.</li>
+                <li>Designed Star Schema models in Snowflake, eliminating 25% redundant reporting.</li>
+                <li>Created automated Excel reports, saving 40% of weekly work hours.</li>
+                <li>Built Tableau dashboards tracking churn, boosting campaign ROI by 15%.</li>
+              </ul>
             </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Programming</h4>
-                    <ul>
-                        <li>Python, SQL, PySpark</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>AI/ML</h4>
-                    <ul>
-                        <li>Scikit-learn, XGBoost, TensorFlow, Time‑Series Forecasting (Prophet, ARIMA), NLP (SpaCy, NLTK)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Data Engineering</h4>
-                    <ul>
-                        <li>Talend, Informatica, Apache Airflow, PySpark, Hive, Delta Lake, AWS (S3, Redshift, SageMaker), Azure (Synapse)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Analytics & Visualization</h4>
-                    <ul>
-                        <li>Power BI (DAX, Power Query), Tableau (LOD Calculations), Advanced Excel, Pandas, NumPy, Matplotlib</li>
-                    </ul>
-                </div>
+            <!-- Intern -->
+            <div class="resume-item">
+              <h4>Intern, Tera Star Networks Pvt Ltd</h4>
+              <h5>01/2019 – 06/2019</h5>
+              <p><em>Hyderabad, India</em></p>
+              <ul>
+                <li>Developed pytest-based ETL validation framework, catching 95% of data issues pre-release.</li>
+                <li>Built regression models achieving 85% forecasting accuracy, reducing stockouts by 12%.</li>
+                <li>Refactored SQL procedures & Informatica mappings, cutting batch time by 30%.</li>
+              </ul>
             </div>
-        "</div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="section-content">
-                <div class="project-item">
-                    <h4>Retail Sales Forecasting</h4>
-                    <ul>
-                        <li>Addressed inventory cost issues caused by inaccurate demand predictions (12% overstock).</li>
-                        <li>Developed an ensemble forecasting model combining XGBoost and ARIMA techniques.</li>
-                        <li>Created meaningful features including holiday indicators and price elasticity metrics.</li>
-                        <li>Designed an interactive Power BI dashboard for real-time inventory monitoring.</li>
-                        <li>Results: Achieved 12% reduction in overstock costs, saving $85K annually.</li>
-                    </ul>
-                </div>
-                <div class="project-item">
-                    <h4>Fashion Trends Analysis</h4>
-                    <ul>
-                        <li>Conducted comprehensive analysis of 20 years of historical sales data to solve declining market share issues.</li>
-                        <li>Implemented SQL window functions and k-means clustering on social media sentiment data.</li>
-                        <li>Built interactive Tableau visualizations to track emerging fashion trends.</li>
-                        <li>Results: Enabled data-driven inventory planning projected to increase market share by 10%.</li>
-                    </ul>
-                </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Education & Skills</h3>
+            <!-- Education -->
+            <div class="resume-item pb-0">
+              <h4>Master of Science in Business Analytics</h4>
+              <h5>2025</h5>
+              <p>Lewis University</p>
             </div>
-        </div>
-    </section>
-
-    <section id="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="section-content">
-                <div class="experience-item">
-                    <h3>Master of Science in Business Analytics</h3>
-                    <span>Lewis University | 2025</span>
-                </div>
-                <div class="experience-item">
-                    <h3>Bachelor of Commerce in Computer Applications</h3>
-                    <span>Osmania University | 2020</span>
-                </div>
+            <div class="resume-item pb-0">
+              <h4>Bachelor of Commerce in Computer Applications</h4>
+              <h5>2020</h5>
+              <p>Osmania University</p>
             </div>
+            <!-- Skills -->
+            <div class="resume-item">
+              <h4>Skills</h4>
+              <div class="skills-content">
+                <div class="progress">
+                  <span class="skill">Python <i class="val">90%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <span class="skill">SQL <i class="val">95%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <span class="skill">Power BI <i class="val">85%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="progress">
+                  <span class="skill">Tableau <i class="val">80%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </section><!-- End Resume Section -->
 
-    <footer id="contact">
-        <div class="container">
-            <p>Contact Me:</p>
-            <p><a href="mailto:Dharmapuribhargav6909@gmail.com">Dharmapuribhargav6909@gmail.com</a> | <a href="tel:+13312904803">(331) 290-4803</a></p>
-            <p><a href="https://www.linkedin.com/in/bhargav-d-167566202/">LinkedIn</a> | <a href="https://bdharmapuri.github.io/bhargav-dharmapuri.github.io/">GitHub Portfolio</a></p>
-            <p>© 2025 Bhargav Dharmapuri. All rights reserved.</p>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Technical expertise and tool proficiency.</p>
         </div>
-    </footer>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="icofont-data"></i></div>
+            <h4 class="title"><a href="">Programming & Analytics</a></h4>
+            <p class="description">Python, SQL, PySpark, Pandas, NumPy, SciPy, Matplotlib.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="icofont-brain-alt"></i></div>
+            <h4 class="title"><a href="">AI & Machine Learning</a></h4>
+            <p class="description">Scikit-learn, XGBoost, TensorFlow, Prophet, ARIMA, NLP with SpaCy/NLTK.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="icofont-engineering"></i></div>
+            <h4 class="title"><a href="">Data Engineering</a></h4>
+            <p class="description">Talend, Informatica, Airflow, Hive, Delta Lake, AWS & Azure Cloud.</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>Highlighted deliverables and outcomes.</p>
+        </div>
+        <div class="row portfolio-container">
+
+          <div class="col-lg-6 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/retail.jpg" class="img-fluid" alt="Retail Sales Forecasting">
+              <div class="portfolio-info">
+                <h4>Retail Sales Forecasting</h4>
+                <p>Ensemble forecasting with XGBoost & ARIMA</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/retail.jpg" data-gall="portfolioGallery" class="venobox" title="Retail Forecasting"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/fashion.jpg" class="img-fluid" alt="Fashion Trends Analysis">
+              <div class="portfolio-info">
+                <h4>Fashion Trends Analysis</h4>
+                <p>Clustering & trend detection over 20 years of sales data</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/fashion.jpg" data-gall="portfolioGallery" class="venobox" title="Fashion Trends"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Let&rsquo;s connect!</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">  
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Location</h3>
+              <p>Chicago, IL, USA</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email</h3>
+              <p>Dharmapuribhargav6909@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call</h3>
+              <p>+1 (331) 290-4803</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container d-md-flex py-4">
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; 2025 <strong><span>Bhargav Dharmapuri</span></strong>. All Rights Reserved
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://www.linkedin.com/in/bhargav-d-167566202/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://bdharmapuri.github.io/bhargav-dharmapuri.github.io/" class="github"><i class="bx bxl-github"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#hero" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
