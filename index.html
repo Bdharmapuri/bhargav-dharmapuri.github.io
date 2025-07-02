@@ -3,182 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bhargav Dharmapuri - Portfolio</title>
+  <title>Bhargav Dharmapuri - 3D Dramatic Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- AOS for animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pzwVN+IjV8T0YUne+0zYyR+VbH0ybRHQH1+2KsC3+Cxtb8bi+G8/kCR50ew6ymXkDAlP5vvKqRaNLoO0GDaqfw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    /* Root colors */
     :root {
       --bg-dark: #000;
       --text-light: #fff;
-      --accent: #ffc107;
+      --accent: #ffd54f;
+      --accent-dark: #ffca28;
+      --glass-bg: rgba(255,255,255,0.15);
+      --glass-border: rgba(255,255,255,0.4);
+      --glass-shadow: rgba(0,0,0,0.7);
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
-      overflow-x: hidden;
-    }
-    /* Navbar */
-    .navbar {
-      background: transparent !important;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-      padding: 1rem 2rem;
-    }
-    .navbar-brand { color: var(--text-light); font-weight: bold; }
-    .navbar-nav .nav-link {
-      color: var(--text-light) !important;
-      margin-right: 1.5rem;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-    }
-    .navbar-nav .nav-link.active { position: relative; }
-    .navbar-nav .nav-link.active::after {
-      content: '';
-      width: 6px; height: 6px;
-      background: var(--accent);
-      border-radius: 50%;
-      position: absolute;
-      bottom: -4px; left: 50%; transform: translateX(-50%);
-    }
-    /* Hero */
-    .hero {
-      height: 100vh;
-      background: url('assets/img/hero-bg.jpg') center/cover no-repeat;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
-      padding: 0 1rem;
-    }
-    .hero-content h5 {
-      font-size: 1.1rem;
-      letter-spacing: 0.1em;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-    .hero-content h1 {
-      font-size: 3rem;
-      font-weight: 300;
-      margin-bottom: 1rem;
-    }
-    .hero-content h1 .highlight {
-      font-weight: 700;
-      color: var(--accent);
-    }
-    .hero-content .cursor {
-      display: inline-block;
-      width: 2px;
-      height: 1em;
-      background: var(--text-light);
-      animation: blink 1s infinite;
-      vertical-align: bottom;
-      margin-left: 2px;
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      51%, 100% { opacity: 0; }
-    }
-    /* Social & CV button */
-    .hero-social {
-      margin: 2rem 0;
-    }
-    .hero-social a {
-      color: var(--text-light);
-      font-size: 1.2rem;
-      margin: 0 0.5rem;
-      transition: color 0.3s;
-    }
-    .hero-social a:hover { color: var(--accent); }
-    .btn-cv {
-      display: inline-block;
-      padding: 0.75rem 2rem;
-      border: 2px solid var(--text-light);
-      border-radius: 50px;
-      text-decoration: none;
-      color: var(--text-light);
-      transition: background 0.3s, color 0.3s;
-    }
-    .btn-cv:hover {
-      background: var(--accent);
-      color: var(--bg-dark);
-      border-color: var(--accent);
-    }
-    /* Scroll arrow */
-    .scroll-down {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%; transform: translateX(-50%);
-      font-size: 2rem;
-      color: var(--text-light);
-      animation: bounce 2s infinite;
-    }
-    @keyframes bounce {
-      0%,100% { transform: translate(-50%, 0); }
-      50% { transform: translate(-50%, 10px); }
-    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+    body { background: var(--bg-dark); color: var(--text-light); overflow-x:hidden; scroll-behavior: smooth; }
+    a { color: var(--accent); transition: color .3s; }
+    a:hover { color: var(--accent-dark); }
+    .glass { background: var(--glass-bg); border:1px solid var(--glass-border); backdrop-filter: blur(15px); border-radius:20px; box-shadow: 0 12px 48px var(--glass-shadow); }
+    .perspective { perspective: 1500px; }
+    .navbar { background: rgba(0,0,0,0.6)!important; backdrop-filter:blur(15px); position:fixed; top:0; width:100%; z-index:100; padding:1rem 2rem; }
+    .navbar-brand, .nav-link { color: var(--text-light)!important; font-weight:600; }
+    .nav-link:hover { color: var(--accent); transform:translateZ(10px); }
+    .hero { height:100vh; background:url('assets/img/hero-bg.jpg') center/cover no-repeat; position:relative; display:flex; align-items:center; justify-content:center; }
+    .hero::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); }
+    .hero-content { position:relative; z-index:1; text-align:center; padding:2rem; transform-style:preserve-3d; animation:heroEntrance 1.2s ease-out forwards; }
+    @keyframes heroEntrance { 0%{opacity:0; transform:rotateY(-30deg) translateZ(-200px);} 100%{opacity:1; transform:rotateY(0) translateZ(0);} }
+    .hero-content h1 { font-size:4rem; font-weight:300; background:linear-gradient(90deg,var(--accent),var(--accent-dark)); -webkit-background-clip:text; color:transparent; margin-bottom:1rem; text-shadow:0 0 20px var(--accent-dark); }
+    .cursor { display:inline-block; width:2px; height:1em; background:var(--text-light); animation:blink 1s infinite; vertical-align:bottom; }
+    @keyframes blink { 0%,50%{opacity:1;}51%,100%{opacity:0;} }
+    .glass.btn { display:inline-block; padding:1rem 2rem; color: var(--text-light); font-weight:600; text-transform:uppercase; border:2px solid var(--accent); backdrop-filter:blur(15px); box-shadow:0 8px 24px var(--glass-shadow); transition:transform .3s, box-shadow .3s; }
+    .glass.btn:hover { transform: translateZ(40px) rotateX(5deg) scale(1.1); box-shadow:0 16px 48px var(--glass-shadow); }
+    section { padding:8rem 0; }
+    .section-title { text-align:center; color:var(--accent); margin-bottom:3rem; font-size:2.5rem; font-weight:700; position:relative; }
+    .section-title::after { content:''; width:80px; height:4px; background:var(--accent); position:absolute; bottom:-15px; left:50%; transform:translateX(-50%); }
+    .card.glass { background: var(--glass-bg); border:1px solid var(--glass-border); backdrop-filter:blur(15px); border-radius:12px; padding:3rem; color: var(--text-light); box-shadow: 0 16px 48px var(--glass-shadow); transition:transform .5s, box-shadow .5s; transform-style:preserve-3d; }
+    .card.glass:hover { transform: perspective(1500px) rotateY(20deg) rotateX(10deg) translateZ(30px); box-shadow: 0 24px 64px var(--glass-shadow); }
+    .card.glass h5 { font-weight:700; margin-bottom:1.2rem; font-size:1.2rem; }
+    .card.glass ul { margin-left:1.5rem; font-size:0.95rem; }
+    @media(max-width:768px){ .hero-content h1{font-size:3rem;} .section-title{font-size:2rem;} }
   </style>
 </head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Bhargav</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100" class="perspective">
+  <nav class="navbar navbar-expand-lg glass">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">Bhargav Dharmapuri</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
-          <li class="nav-item"><a class="nav-link" href="#clients">Client</a></li>
-          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content text-center">
-      <h5>Hello &amp; Welcome</h5>
+
+  <section id="hero" class="hero">
+    <div class="hero-content">
       <h1>I Am <span class="highlight">Bhargav Dharmapuri</span><span class="cursor"></span></h1>
-      <div class="hero-social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-dribbble"></i></a>
-        <a href="#"><i class="fab fa-google-plus-g"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-      </div>
-      <a href="#resume" class="btn-cv">Download CV</a>
+      <a href="#about" class="glass btn btn-outline-light">Discover More</a>
     </div>
-    <div class="scroll-down"><i class="fas fa-chevron-down"></i></div>
   </section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  <section id="about">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">About Me</h2>
+      <div class="card glass mx-auto" style="max-width:800px;">
+        <p>Results-driven Data Analyst with 4+ years of experience in BI, predictive analytics, data engineering, and ML. Expert in end-to-end pipelines (Kafka, Airflow, Spark), advanced modeling (XGBoost, ARIMA, NLP), and deployment (Flask, Docker). Proven ability to drive 15-20% efficiency gains and train cross-functional teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="card glass">
+            <h5>Data Analyst | Carrier Technologies</h5>
+            <p class="fst-italic text-muted">Hyderabad, India | 06/2020 – 07/2023</p>
+            <ul>
+              <li>Led SQL & Pandas analyses on 10K+ records/month, boosting ops efficiency by 15%.</li>
+              <li>Developed phased Prophet & ARIMA forecasts, improving inventory accuracy by 20% ($60K savings).</li>
+              <li>Automated Power BI reporting (Gateway), saving 15+ hrs/week for 100+ users.</li>
+              <li>Optimized Azure Synapse pipelines, cutting query times by 40% on 5TB datasets.</li>
+              <li>Designed DAX & drill-through dashboards, accelerating exec decisions by 35%.</li>
+              <li>Mentored 15+ analysts on SQL & BI best practices, driving 50% adoption.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card glass">
+            <h5>Junior Data Analyst | Micron Technologies</h5>
+            <p class="fst-italic text-muted">Hyderabad, India | 07/2019 – 12/2019</p>
+            <ul>
+              <li>Automated Excel ETL using Talend & OpenPyXL, reducing manual effort by 40%.</li>
+              <li>Engineered PySpark ETL for 10TB+ JSON/Parquet, improving performance by 30%.</li>
+              <li>Applied GridSearchCV tuning, cutting pipeline runtime by 30%.</li>
